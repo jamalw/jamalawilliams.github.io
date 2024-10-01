@@ -1,0 +1,179 @@
+
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim)
+fchdir() to previous dir
+could not source "$VIM/vimrc"
+chdir(/home/jamalw)
+fchdir() to previous dir
+sourcing "$HOME/.vimrc"
+chdir(/home/jamalw/.vim)
+fchdir() to previous dir
+chdir(/home/jamalw/.vim)
+fchdir() to previous dir
+chdir(/home/jamalw/.vim/pack/plugins/start)
+fchdir() to previous dir
+chdir(/home/jamalw/.vim/pack/plugins/start/vim-ai/plugin)
+fchdir() to previous dir
+line 6: sourcing "/home/jamalw/.vim/pack/plugins/start/vim-ai/plugin/vim-ai.vim"
+finished sourcing /home/jamalw/.vim/pack/plugins/start/vim-ai/plugin/vim-ai.vim
+continuing in /home/jamalw/.vimrc
+not found in 'packpath': "pack/*/opt/vim-ai"
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax)
+fchdir() to previous dir
+line 64: sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/syntax.vim"
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax)
+fchdir() to previous dir
+line 19: sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/synload.vim"
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax)
+fchdir() to previous dir
+line 21: sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/syncolor.vim"
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/colors/lists)
+fchdir() to previous dir
+line 53: sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/colors/lists/default.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/colors/lists/default.vim
+continuing in /net/vast-storage/scratch/vast/mcdermott/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/syncolor.vim
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/syncolor.vim
+continuing in /net/vast-storage/scratch/vast/mcdermott/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/synload.vim
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/synload.vim
+continuing in /net/vast-storage/scratch/vast/mcdermott/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/syntax.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90)
+fchdir() to previous dir
+line 25: sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/filetype.vim"
+chdir(/home/jamalw/.vim/pack/plugins/start/vim-ai/ftdetect)
+fchdir() to previous dir
+line 2643: sourcing "/home/jamalw/.vim/pack/plugins/start/vim-ai/ftdetect/aichat.vim"
+finished sourcing /home/jamalw/.vim/pack/plugins/start/vim-ai/ftdetect/aichat.vim
+continuing in /net/vast-storage/scratch/vast/mcdermott/jamalw/.conda/envs/pytorch2/share/vim/vim90/filetype.vim
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/filetype.vim
+continuing in /net/vast-storage/scratch/vast/mcdermott/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/syntax.vim
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing BufRead Autocommands for "*.py"
+autocommand setf python
+
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing BufRead Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+Executing BufRead Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat    && (getline(1) =~ '^#' || getline(2) =~ '^#' || getline(3) =~ '^#'^I|| getline(4) =~ '^#' || getline(5) =~ '^#') |   setf FALLBACK conf | endif
+
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/syntax/syntax.vim
+continuing in /home/jamalw/.vimrc
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90)
+fchdir() to previous dir
+line 68: sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/filetype.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/filetype.vim
+continuing in /home/jamalw/.vimrc
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90)
+fchdir() to previous dir
+line 68: sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/ftplugin.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/ftplugin.vim
+continuing in /home/jamalw/.vimrc
+finished sourcing $HOME/.vimrc
+chdir(/home/jamalw/.vim/pack/plugins/start/vim-ai/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.vim/pack/plugins/start/vim-ai/plugin/vim-ai.vim"
+finished sourcing /home/jamalw/.vim/pack/plugins/start/vim-ai/plugin/vim-ai.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/getscriptPlugin.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/getscriptPlugin.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/gzip.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/gzip.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/logiPat.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/logiPat.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/manpager.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/manpager.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/matchparen.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/matchparen.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/netrwPlugin.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/netrwPlugin.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/rrhelper.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/rrhelper.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/spellfile.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/spellfile.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/tarPlugin.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/tarPlugin.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/tohtml.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/tohtml.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/vimballPlugin.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/vimballPlugin.vim
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin)
+fchdir() to previous dir
+sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/zipPlugin.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/plugin/zipPlugin.vim
+not found in 'runtimepath': "plugin/**/*.vim"
+Reading viminfo file "/home/jamalw/.viminfo" info oldfiles
+"test_vim.py" 
+"test_vim.py" 5L, 361B
+Reading viminfo file "/home/jamalw/.viminfo" marks
+Executing BufRead Autocommands for "*"
+autocommand if line("'\"") > 0 && line ("'\"") <= line("$") |   exe "normal! g'\"" | endif
+
+Executing BufRead Autocommands for "*.py"
+autocommand setf python
+
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing FileType Autocommands for "*"
+autocommand call LoadFTPlugin()
+
+chdir(/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/ftplugin)
+fchdir() to previous dir
+line 18: sourcing "/home/jamalw/.conda/envs/pytorch2/share/vim/vim90/ftplugin/python.vim"
+finished sourcing /home/jamalw/.conda/envs/pytorch2/share/vim/vim90/ftplugin/python.vim
+continuing in <SNR>10_LoadFTPlugin
+Executing BufRead Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+Executing BufRead Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat    && (getline(1) =~ '^#' || getline(2) =~ '^#' || getline(3) =~ '^#'^I|| getline(4) =~ '^#' || getline(5) =~ '^#') |   setf FALLBACK conf | endif
+
+Executing BufEnter Autocommands for "*"
+autocommand sil call s:LocalBrowse(expand("<amatch>"))
+
+Executing VimEnter Autocommands for "*"
+autocommand sil call s:VimEnter(expand("<amatch>"))
+
+Executing CursorMoved Autocommands for "*"
+autocommand let g:vim_ai_is_selection_pending = mode() =~# "^[vV\<C-v>]"
+
+Executing CursorMoved Autocommands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+
+chdir(/home/jamalw/.vim/pack/plugins/start/vim-ai/autoload)
+fchdir() to previous dir
+sourcing "/home/jamalw/.vim/pack/plugins/start/vim-ai/autoload/vim_ai.vim"
+chdir(/home/jamalw/.vim/pack/plugins/start/vim-ai/autoload)
+fchdir() to previous dir
+line 1: sourcing "/home/jamalw/.vim/pack/plugins/start/vim-ai/autoload/vim_ai_config.vim"
+finished sourcing /home/jamalw/.vim/pack/plugins/start/vim-ai/autoload/vim_ai_config.vim
+continuing in /home/jamalw/.vim/pack/plugins/start/vim-ai/autoload/vim_ai.vim
+finished sourcing /home/jamalw/.vim/pack/plugins/start/vim-ai/autoload/vim_ai.vim
+
+Writing viminfo file "/home/jamalw/.viminfo"
