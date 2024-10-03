@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-    Stellar by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
     <title>Jamal A. Williams | Personal Website</title>
@@ -12,21 +7,23 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Custom styling for profile picture and brain logo */
+        /* Custom styling for the images */
         .profile-pic {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 150px;
-            border-radius: 50%;
-            border: 2px solid #fff;
+            width: 100%; /* Ensure it fills the container */
+            border-radius: 50%; /* Makes the image circular */
         }
 
-        .brain-logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 150px;
+        .profile-pic-wrapper {
+            width: 200px; /* Adjust size as needed */
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        /* Reduce padding/margin to bring the white box closer to the top */
+        .intro {
+            padding-top: 10px; /* Reduced padding */
         }
     </style>
 </head>
@@ -35,100 +32,69 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Add Profile Picture and Brain Logo -->
-        <img src="images/webpage_photo_1.png" alt="Profile Picture" class="profile-pic" />
-        <img src="images/brain_with_curved_staff.png" alt="Brain Logo" class="brain-logo" />
-
-        <!-- Header -->
-        <header id="header" class="alt">
-            <span class="logo"><img src="images/logo.svg" alt="" /></span>
-            <h1>Jamal A. Williams</h1>
-            <p>Cognitive Neuroscientist | Researcher in Music, Memory, and Perception</p>
-        </header>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li><a href="#intro" class="active">Introduction</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#first">First Section</a></li>
-                <li><a href="#second">Second Section</a></li>
-                <li><a href="#cta">Get Started</a></li>
-            </ul>
-        </nav>
-
-        <!-- Main -->
-        <div id="main">
-
-            <!-- Introduction -->
-            <section id="intro" class="main">
-                <div class="spotlight">
-                    <div class="content">
-                        <header class="major">
-                            <h2>Ipsum sed adipiscing</h2>
-                        </header>
-                        <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn More</a></li>
-                        </ul>
-                    </div>
-                    <span class="image"><img src="images/pic01.jpg" alt="" /></span>
-                </div>
-            </section>
-
-            <!-- About Me Section -->
-            <section id="about-me" class="main">
-                <header class="major">
-                    <h2>About Me</h2>
-                </header>
-                <div class="content">
-                    <div id="about-me-content">Loading...</div>
-                    <script>
-                        // Load the about_me.txt content
-                        fetch('about_me.txt')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('about-me-content').innerText = data;
-                            })
-                            .catch(error => {
-                                document.getElementById('about-me-content').innerText = "Error loading About Me content.";
-                                console.error('Error:', error);
-                            });
-                    </script>
-                </div>
-            </section>
-
-            <!-- First Section -->
-            <section id="first" class="main special">
-                <header class="major">
-                    <h2>Magna veroeros</h2>
-                </header>
-                <ul class="features">
-                    <li>
-                        <span class="icon solid major style1 fa-code"></span>
-                        <h3>Ipsum consequat</h3>
-                        <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-                    </li>
-                    <li>
-                        <span class="icon major style3 fa-copy"></span>
-                        <h3>Amed sed feugiat</h3>
-                        <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-                    </li>
-                    <li>
-                        <span class="icon major style5 fa-gem"></span>
-                        <h3>Dolor nullam</h3>
-                        <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-                    </li>
+        <!-- Intro Section -->
+        <section class="intro">
+            <header>
+                <h1>Jamal A. Williams</h1>
+                <p>Cognitive Neuroscientist | Researcher in Music, Memory, and Perception</p>
+                <ul class="actions">
+                    <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
                 </ul>
-                <footer class="major">
-                    <ul class="actions special">
-                        <li><a href="generic.html" class="button">Learn More</a></li>
-                    </ul>
-                </footer>
-            </section>
+            </header>
+            <div class="content">
+                <!-- Replacing the circular section with your profile picture -->
+                <div class="profile-pic-wrapper">
+                    <img src="images/webpage_photo_1.png" alt="Profile Picture" class="profile-pic" />
+                </div>
+            </div>
+        </section>
 
-            <!-- Second Section -->
-            <section id="second" class="main special">
-                <header class="major">
-                    <h2
+        <!-- Main content below -->
+        <!-- About Me Section -->
+        <section id="about-me" class="main">
+            <header class="major">
+                <h2>About Me</h2>
+            </header>
+            <div class="content">
+                <div id="about-me-content">Loading...</div>
+                <script>
+                    // Load the about_me.txt content
+                    fetch('about_me.txt')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('about-me-content').innerText = data;
+                        })
+                        .catch(error => {
+                            document.getElementById('about-me-content').innerText = "Error loading About Me content.";
+                            console.error('Error:', error);
+                        });
+                </script>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer id="footer">
+            <section>
+                <h2>Contact Information</h2>
+                <dl class="alt">
+                    <dt>Email</dt>
+                    <dd><a href="mailto:jamalw@mit.edu">jamalw@mit.edu</a></dd>
+                </dl>
+            </section>
+            <p class="copyright">&copy; 2024 Jamal A. Williams. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
 
