@@ -9,20 +9,21 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
 			/* Custom styling for the images */
+			.profile-brain-container {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 20px;
+			}
+
 			.profile-pic {
-				position: absolute;
-				top: 20px;
-				left: 20px;
-				width: 175px; /* Adjust the size as needed */
+				width: 150px; /* Adjust the size as needed */
 				border-radius: 50%;
 				border: 2px solid #fff;
 			}
 
 			.brain-logo {
-				position: absolute;
-				top: 20px;
-				right: 20px;
-				width: 175px; /* Adjust the size as needed */
+				width: 150px; /* Adjust the size as needed */
 			}
 
 			/* Reduce the size of the name and adjust About Me positioning */
@@ -41,12 +42,12 @@
 		<!-- Wrapper -->
 		<div id="wrapper">
 
-			<!-- Add Profile Picture and Brain Logo -->
-			<img src="images/webpage_photo_1.png" alt="Profile Picture" class="profile-pic" />
-			<img src="images/brain_with_curved_staff.png" alt="Brain Logo" class="brain-logo" />
-
-			<!-- Intro Section -->
+			<!-- Intro Section with Profile Picture and Brain Logo -->
 			<section class="intro">
+				<div class="profile-brain-container">
+					<img src="images/webpage_photo_1.png" alt="Profile Picture" class="profile-pic" />
+					<img src="images/brain_with_curved_staff.png" alt="Brain Logo" class="brain-logo" />
+				</div>
 				<header>
 					<h1>Jamal A. Williams</h1>
 					<p>Cognitive Neuroscientist | Researcher in Music, Memory, and Perception</p>
