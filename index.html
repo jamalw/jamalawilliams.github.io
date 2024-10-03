@@ -4,24 +4,21 @@
     <title>Jamal A. Williams | Personal Website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Personal website of Jamal A. Williams" />
+    <meta name="keywords" content="neuroscience, cognitive neuroscience, research" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Custom styling for the images */
+        /* Custom styling */
         .profile-pic {
-            width: 100%; /* Ensure it fills the container */
-            border-radius: 50%; /* Makes the image circular */
-        }
-
-        .profile-pic-wrapper {
-            width: 200px; /* Adjust size as needed */
-            height: 200px;
-            overflow: hidden;
+            position: absolute;
+            top: 60px; /* Adjust this to move the profile picture vertically */
+            left: 40px; 
+            width: 150px; /* Adjust the size as needed */
             border-radius: 50%;
-            margin: 0 auto;
+            border: 2px solid #fff;
+            z-index: 2; /* Ensure it stays above the white box */
         }
 
-        /* Position the brain logo in the top right corner */
         .brain-logo {
             position: absolute;
             top: 20px;
@@ -29,11 +26,47 @@
             width: 150px; /* Adjust the size as needed */
         }
 
-        /* Make adjustments to bring the white box closer to the top */
-        .main-content-box {
-            margin-top: -150px; /* Adjust the margin to move the white box up */
+        .big-white-box {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: var(--box-top); /* Customizable top position */
+            width: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
         }
 
+        /* Styling for the navigation tabs */
+        .nav-bar {
+            background-color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .nav-bar ul {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .nav-bar ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-bar ul li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -41,74 +74,48 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Tabs Section -->
-        <section id="tabs">
-            <header>
-                <ul>
-                    <li><a href="#intro" class="active">Introduction</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">First Section</a></li>
-                    <li><a href="#contact">Second Section</a></li>
-                    <li><a href="#get-started">Get Started</a></li>
-                </ul>
-            </header>
-        </section>
-
-        <!-- Add Brain Logo back to the top right -->
+        <!-- Add Brain Logo -->
         <img src="images/brain_with_curved_staff.png" alt="Brain Logo" class="brain-logo" />
 
-        <!-- Main content box that contains text (About Me) and Profile Picture -->
-        <section class="main-content-box">
+        <!-- Navigation Bar (tabs) -->
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#first-section">First Section</a></li>
+                <li><a href="#second-section">Second Section</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+            </ul>
+        </div>
+
+        <!-- Big White Box -->
+        <div class="big-white-box" style="--box-top: 200px;"> <!-- Use this to control the vertical position -->
             <header>
                 <h1>Jamal A. Williams</h1>
                 <p>Cognitive Neuroscientist | Researcher in Music, Memory, and Perception</p>
             </header>
-
-            <!-- Profile Picture inside the white box -->
-            <div class="profile-pic-wrapper">
+            <div class="content">
                 <img src="images/webpage_photo_1.png" alt="Profile Picture" class="profile-pic" />
+                <p id="about-me-content">Loading About Me...</p>
+                <script>
+                    // Load the about_me.txt content
+                    fetch('about_me.txt')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('about-me-content').innerText = data;
+                        })
+                        .catch(error => {
+                            document.getElementById('about-me-content').innerText = "Error loading About Me content.";
+                            console.error('Error:', error);
+                        });
+                </script>
             </div>
-
-            <!-- About Me Section -->
-            <section id="about-me">
-                <header>
-                    <h2>About Me</h2>
-                </header>
-                <div class="content">
-                    <div id="about-me-content">Loading...</div>
-                    <script>
-                        // Load the about_me.txt content
-                        fetch('about_me.txt')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('about-me-content').innerText = data;
-                            })
-                            .catch(error => {
-                                document.getElementById('about-me-content').innerText = "Error loading About Me content.";
-                                console.error('Error:', error);
-                            });
-                    </script>
-                </div>
-            </section>
-        </section>
-
-        <!-- Footer Section -->
-        <footer id="footer">
-            <section>
-                <h2>Contact Information</h2>
-                <dl class="alt">
-                    <dt>Email</dt>
-                    <dd><a href="mailto:your_email@example.com">your_email@example.com</a></dd>
-                </dl>
-            </section>
-            <p class="copyright">&copy; 2024 Jamal A. Williams. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
+        </div>
 
     </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
