@@ -23,14 +23,15 @@
             background-color: #f8f9fa;
         }
         .profile-picture, .brain-logo {
-            width: 100px; /* Adjust size as needed */
+            width: 150px; /* Increase size for profile picture and brain logo */
             height: auto;
         }
         .profile-picture {
             border-radius: 50%; /* Makes the image circular for the profile picture */
         }
+        /* Black background for the nav bar */
         nav {
-            background-color: #495057;
+            background-color: #000; /* Black background for the bar above the header */
             padding: 0.5rem;
             text-align: center;
         }
@@ -61,6 +62,14 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Me</a>
+        <a href="#">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+
     <header>
         <!-- Profile Picture on the left -->
         <img src="webpage_photo_1.png" alt="Profile Picture" class="profile-picture">
@@ -71,14 +80,6 @@
         <!-- Brain Logo on the right -->
         <img src="brain_with_curved_staff.png" alt="Brain Logo" class="brain-logo">
     </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Projects</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-    </nav>
 
     <main>
         <h2>About Me</h2>
