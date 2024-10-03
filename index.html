@@ -1,134 +1,97 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Jamal A. Williams | Personal Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Personal website of Jamal A. Williams" />
-		<meta name="keywords" content="neuroscience, cognitive neuroscience, research" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Custom styling for the images */
-			.profile-pic {
-				position: absolute;
-				top: 20px;
-				left: 20px;
-				width: 150px; /* Adjust the size as needed */
-				border-radius: 50%;
-				border: 2px solid #fff;
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Jamal A. Williams">
+    <title>Jamal A. Williams | Personal Website</title>
+    <link rel="stylesheet" href="assets/css/main.css"> <!-- Link to an external CSS file if needed -->
+    <style>
+        /* Basic styling for the template */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        /* Container for the profile picture and brain logo */
+        .profile-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2ec4b6;
+            padding: 20px;
+        }
+        
+        /* Profile picture styling */
+        .profile-container img.profile {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
 
-			.brain-logo {
-				position: absolute;
-				top: 20px;
-				right: 40px;
-				width: 150px; /* Adjust the size as needed */
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+        /* Brain logo styling */
+        .profile-container img.logo {
+            width: 150px;
+            height: auto;
+        }
+        
+        /* Text section styling */
+        .profile-container .text-content {
+            text-align: center;
+            flex-grow: 1;
+        }
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+        /* Adjust the font size of the name */
+        .profile-container .text-content h1 {
+            font-size: 2.5rem; /* Smaller font size for the name */
+        }
 
-			<!-- Add Profile Picture and Brain Logo -->
-			<img src="images/webpage_photo_1.png" alt="Profile Picture" class="profile-pic" />
-			<img src="images/brain_with_curved_staff.png" alt="Brain Logo" class="brain-logo" />
+        /* About Me section */
+        .about-me {
+            margin-top: -50px; /* Move About Me section higher */
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Profile and Brain Logo Section -->
+    <div class="profile-container">
+        <img src="webpage_photo_1.png" alt="Profile Picture" class="profile">
+        <div class="text-content">
+            <h1>Jamal A. Williams</h1>
+            <p>Cognitive Neuroscientist | Researcher in Music, Memory, and Perception</p>
+        </div>
+        <img src="brain_with_curved_staff.png" alt="Brain Logo" class="logo">
+    </div>
 
-			<!-- Intro Section -->
-			<section class="intro">
-				<header>
-					<h1>Jamal A. Williams</h1>
-					<p>Cognitive Neuroscientist | Researcher in Music, Memory, and Perception</p>
-					<ul class="actions">
-						<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
-					</ul>
-				</header>
-				<div class="content">
-					<span class="image fill" data-position="center"><img src="images/pic01.jpg" alt="Intro Image" /></span>
-				</div>
-			</section>
+    <!-- About Me Section -->
+    <div class="about-me">
+        <h2>About Me</h2>
+        <div id="about-me-content">Loading...</div>
+    </div>
 
-			<!-- About Me Section -->
-			<section id="first">
-				<header>
-					<h2>About Me</h2>
-				</header>
-				<div class="content">
-					<div id="about-me-content">Loading...</div>
-					<script>
-						// Load the about_me.txt content
-						fetch('about_me.txt')
-							.then(response => response.text())
-							.then(data => {
-								document.getElementById('about-me-content').innerText = data;
-							})
-							.catch(error => {
-								document.getElementById('about-me-content').innerText = "Error loading About Me content.";
-								console.error('Error:', error);
-							});
-					</script>
-				</div>
-			</section>
-
-			<!-- Other Sections (you can customize or add more content) -->
-			<section>
-				<header>
-					<h2>Projects</h2>
-				</header>
-				<div class="content">
-					<ul>
-						<li>Project 1: Neural Event Segmentation in Music Perception</li>
-						<li>Project 2: Computational Modeling of Musical Expectation</li>
-						<li>Project 3: Music-Evoked Memory Reactivation in fMRI</li>
-					</ul>
-				</div>
-			</section>
-
-			<!-- Contact Section -->
-			<section>
-				<header>
-					<h2>Get in Touch</h2>
-				</header>
-				<div class="content">
-					<p>Feel free to reach out for collaborations or inquiries!</p>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Contact Me</a></li>
-					</ul>
-				</div>
-				<footer>
-					<ul class="items">
-						<li>
-							<h3>Email</h3>
-							<a href="mailto:your_email@example.com">your_email@example.com</a>
-						</li>
-						<li>
-							<h3>Elsewhere</h3>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							</ul>
-						</li>
-					</ul>
-				</footer>
-			</section>
-
-			<!-- Footer -->
-			<div class="copyright">
-				&copy; 2024 Jamal A. Williams. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.
-			</div>
-
-		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
+    <script>
+        // Load the about_me.txt file
+        fetch('/about_me.txt')
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    throw new Error('Failed to load About Me content');
+                }
+            })
+            .then(data => {
+                document.getElementById('about-me-content').innerText = data;
+            })
+            .catch(error => {
+                document.getElementById('about-me-content').innerText = "Error loading About Me content.";
+                console.error('Error:', error);
+            });
+    </script>
+</body>
 </html>
 
