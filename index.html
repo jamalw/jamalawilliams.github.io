@@ -16,8 +16,18 @@
             color: #333;
         }
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 1rem;
-            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .profile-picture, .brain-logo {
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+        }
+        .profile-picture {
+            border-radius: 50%; /* Makes the image circular for the profile picture */
         }
         nav {
             background-color: #495057;
@@ -52,7 +62,14 @@
 </head>
 <body>
     <header>
+        <!-- Profile Picture on the left -->
+        <img src="webpage_photo_1.png" alt="Profile Picture" class="profile-picture">
+
+        <!-- Title of the website in the center -->
         <h1>Jamal A. Williams</h1>
+
+        <!-- Brain Logo on the right -->
+        <img src="brain_with_curved_staff.png" alt="Brain Logo" class="brain-logo">
     </header>
 
     <nav>
