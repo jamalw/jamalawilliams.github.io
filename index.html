@@ -10,12 +10,10 @@
     <style>
         /* Custom styling for images */
         .profile-pic {
-            position: absolute;
-            top: 140px;
-            left: 20px;
             width: 200px;
             border-radius: 50%;
             border: 2px solid #fff;
+            margin-left: 20px; /* Adjust to move the image slightly away from the text */
         }
 
         .brain-logo {
@@ -75,11 +73,47 @@
         section h2 {
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 0.5rem;
+            text-align: center; /* Center the section heading */
         }
 
         section p {
             line-height: 1.6;
             color: #333;
+        }
+
+        /* Flexbox to align the profile picture and text side by side */
+        .about-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .about-section .text-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .about-section .profile-container {
+            flex-shrink: 0;
+        }
+
+        /* Styling for the grey line with "About Me" in the middle */
+        .about-heading {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .about-heading::before,
+        .about-heading::after {
+            content: '';
+            flex: 1;
+            border-bottom: 2px solid #e0e0e0;
+            margin: 0 1rem;
+        }
+
+        .about-heading h2 {
+            margin: 0;
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -104,25 +138,31 @@
                 </ul>
             </div>
 
-            <!-- Content Sections with text and dividers -->
+            <!-- About Me Section -->
             <section id="about-me">
-                <header>
+                <div class="about-heading">
                     <h2>About Me</h2>
-                </header>
-                <img src="images/webpage_photo_1.png" alt="Profile Picture" class="profile-pic" />
-                <p id="about-me-content">Loading About Me...</p>
-                <script>
-                    // Load the about_me.txt content
-                    fetch('about_me.txt')
-                        .then(response => response.text())
-                        .then(data => {
-                            document.getElementById('about-me-content').innerText = data;
-                        })
-                        .catch(error => {
-                            document.getElementById('about-me-content').innerText = "Error loading About Me content.";
-                            console.error('Error:', error);
-                        });
-                </script>
+                </div>
+                <div class="about-section">
+                    <div class="profile-container">
+                        <img src="images/webpage_photo_1.png" alt="Profile Picture" class="profile-pic" />
+                    </div>
+                    <div class="text-content">
+                        <p id="about-me-content">Loading About Me...</p>
+                        <script>
+                            // Load the about_me.txt content
+                            fetch('about_me.txt')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('about-me-content').innerText = data;
+                                })
+                                .catch(error => {
+                                    document.getElementById('about-me-content').innerText = "Error loading About Me content.";
+                                    console.error('Error:', error);
+                                });
+                        </script>
+                    </div>
+                </div>
             </section>
 
             <section id="first-section">
