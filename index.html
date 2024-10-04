@@ -13,7 +13,7 @@
             width: 200px;
             border-radius: 50%;
             border: 2px solid #fff;
-            margin-left: 20px; /* Adjust to move the image slightly away from the text */
+            margin: 20px; /* Adjust to move the image slightly away from the text */
         }
 
         .brain-logo {
@@ -30,7 +30,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 0 auto;
-            max-width: 1200px;
+            max-width: 1000px; /* Adjusted width */
             position: relative;
             top: 150px; /* Adjust this for vertical control */
         }
@@ -84,16 +84,19 @@
         /* Flexbox to align the profile picture and text side by side */
         .about-section {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap; /* Allow text to wrap beneath the image */
+            align-items: flex-start;
         }
 
         .about-section .text-content {
             flex: 1;
             padding-right: 20px;
+            max-width: 700px; /* Shrinks the width of the text */
         }
 
         .about-section .profile-container {
             flex-shrink: 0;
+            align-self: flex-start; /* Moves the image up */
         }
 
         /* Styling for the grey line with "About Me" in the middle */
